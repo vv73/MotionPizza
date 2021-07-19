@@ -1,6 +1,4 @@
-# MotionPizza
-
-# ConstraintPizza
+# MotionPizza (https://github.com/vv73/ConstraintPizza - продолжение)
 
 Проект и презентация к занятию по верстке
 
