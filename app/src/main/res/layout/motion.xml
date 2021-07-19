@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    app:layoutDescription="@xml/motion_scene"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#fdc860"
+        android:maxHeight="200dp"
+        app:layout_constraintDimensionRatio="h,8:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Пицца Пепперони"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-black"
+        android:text="450 руб"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="serif"
+        android:text=" Доставим вкусно!"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ингредиенты"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing1"
+        style="@style/ingredient"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/cheese"
+        app:layout_constraintEnd_toStartOf="@+id/ing2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing2"
+        style="@style/ingredient"
+        android:src="@drawable/sausage"
+        app:layout_constraintBottom_toBottomOf="@+id/ing1"
+        app:layout_constraintEnd_toStartOf="@+id/ing4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ing1"
+        app:layout_constraintTop_toTopOf="@+id/ing1"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/ing3"
+        style="@style/ingredient"
+        android:src="@drawable/mashroom"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ing4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ing4"
+        app:layout_constraintTop_toTopOf="@+id/ing4"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing4"
+        style="@style/ingredient"
+        android:src="@drawable/tomato"
+        app:layout_constraintBottom_toBottomOf="@+id/ing2"
+        app:layout_constraintEnd_toStartOf="@+id/ing3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ing2"
+        app:layout_constraintTop_toTopOf="@+id/ing2"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle" />
+
+    <ImageView
+        android:id="@+id/plate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+
+        android:src="@drawable/plate"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/small"
+        app:layout_constraintTop_toBottomOf="@+id/ing4" />
+
+    <ImageView
+        android:id="@+id/pizza"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/pizza_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/plate"
+        app:layout_constraintEnd_toEndOf="@+id/plate"
+        app:layout_constraintStart_toStartOf="@+id/plate"
+        app:layout_constraintTop_toTopOf="@+id/plate" />
+
+    <Button
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fdc860"
+        android:text="25 см"
+        app:layout_constraintBottom_toTopOf="@+id/medium"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ing1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#fdc860"
+        android:text="35 см"
+        app:layout_constraintBottom_toTopOf="@+id/large"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/small" />
+
+    <Button
+        android:id="@+id/large"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#fdc860"
+        android:text="45 см"
+        app:layout_constraintBottom_toTopOf="@+id/order"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/medium" />
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#fdc860"
+        android:fontFamily="sans-serif-black"
+        android:text="Заказать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="serif"
+        android:text="Одной из универсальных, востребованных пицц является «Пепперони», ведь она очень нравится ценителям итальянской кухни и просто любителям вкусной еды. Блюдо сочетает приятную пикантность и насыщенность, знакомые каждому гурману."
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/toHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="plate,ingredients,price,small,medium,large,order,ing1,ing2,ing3,ing4" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

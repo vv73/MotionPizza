@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">#121212</item>
+        <item name="colorAccent">@android:color/holo_orange_light</item>
+        <item name="actionBarSize">0dp</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+    <style name="clockDigit">
+        <item name ="android:layout_width">wrap_content</item>
+        <item name ="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name ="layout_constraintCircle">@+id/textViewCentre</item>
+        <item name = "layout_constraintCircleRadius">90dp</item>
+    </style>
+    <style name="ingredient">
+        <item name ="android:layout_width">70dp</item>
+        <item name ="android:layout_height">70dp</item>
+    </style>
+    <style name="ingredientViewStyle" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>

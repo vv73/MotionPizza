@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    app:layoutDescription="@xml/motion_scene"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="155dp"
+        android:layout_height="133dp"
+        android:background="#DADADA"
+        android:maxHeight="200dp"
+        app:srcCompat="@drawable/pizza_logo"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Пицца Пепперони"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="450 руб"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text=" Доставим вкусно!"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ингредиенты"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing1"
+        style="@style/ingredient"
+        android:src="@drawable/cheese"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing2"
+        style="@style/ingredient"
+        android:src="@drawable/sausage"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/ing3"
+        style="@style/ingredient"
+        android:src="@drawable/mashroom"
+
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ing4"
+        style="@style/ingredient"
+        android:src="@drawable/tomato"
+        app:shapeAppearanceOverlay="@style/ingredientViewStyle"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <ImageView
+        android:id="@+id/plate"
+        android:layout_width="172dp"
+        android:layout_height="260dp"
+
+        android:src="@drawable/plate"
+        android:textColor="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <ImageView
+        android:id="@+id/pizza"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:src="@drawable/pizza_ic"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <Button
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fdc860"
+        android:text="25 см"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fdc860"
+        android:text="35 см"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <Button
+        android:id="@+id/large"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fdc860"
+        android:text="45 см"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <!-- Дополнительные элементы -->
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#fdc860"
+        android:fontFamily="sans-serif-black"
+        android:text="Заказать"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="559dp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Одной из универсальных, востребованных пицц является «Пепперони», ведь она очень нравится ценителям итальянской кухни и просто любителям вкусной еды. Блюдо сочетает приятную пикантность и насыщенность, знакомые каждому гурману."
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/toHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="plate,ingredients,price,small,medium,large,order,ing1,ing2,ing3,ing4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
