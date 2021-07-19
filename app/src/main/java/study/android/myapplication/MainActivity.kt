@@ -18,6 +18,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar!!.hide()
         setContentView(R.layout.start)
-        Toast.makeText(this, "Расположите элементы так, как в презентации, и потом добавьте анимацию: при выборе размера должен меняться размер пиццы на тарелке, а при тапе на пиццу появляться ее описание", Toast.LENGTH_LONG).show()
     }
 }

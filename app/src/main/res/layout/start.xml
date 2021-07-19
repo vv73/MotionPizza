@@ -10,6 +10,25 @@
     tools:context=".MainActivity">
 
 
+    <!-- ПОЯСНЕНИЕ -->
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Расположите элементы так, как в презентации, и потом добавьте анимацию: при выборе размера должен меняться размер пиццы на тарелке, а при тапе на пиццу появляться ее описание"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- ЕГО МОЖНО УДАЛИТЬ -->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="155dp"
