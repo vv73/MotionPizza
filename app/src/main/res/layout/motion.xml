@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
-    app:layoutDescription="@xml/motion_scene"
+    app:layoutDescription="@xml/motion_scene_v2"
     tools:context=".MainActivity">
 
 
@@ -146,10 +146,10 @@
         android:id="@+id/pizza"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
         android:src="@drawable/pizza_ic"
         app:layout_constraintBottom_toBottomOf="@+id/plate"
         app:layout_constraintEnd_toEndOf="@+id/plate"

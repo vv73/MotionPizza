@@ -92,7 +92,7 @@
         </Constraint>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/PizzaDesc">
+    <ConstraintSet android:id="@+id/pizzaDesc">
         <Constraint
             android:id="@+id/name"
             android:layout_width="wrap_content"
@@ -140,78 +140,60 @@
             app:transitionEasing="accelerate" />
     </ConstraintSet>
 
+
+    <Transition
+        app:constraintSetStart="@+id/smallcs"
+        />
+
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/largecs"
-        app:constraintSetStart="@+id/smallcs">
+        app:constraintSetEnd="@+id/largecs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@id/large" />
     </Transition>
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/mediumcs"
-        app:constraintSetStart="@+id/smallcs">
+        app:constraintSetEnd="@+id/mediumcs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@+id/medium" />
     </Transition>
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/smallcs"
-        app:constraintSetStart="@+id/largecs">
+        app:constraintSetEnd="@+id/smallcs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@+id/small" />
     </Transition>
 
     <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/mediumcs"
-        app:constraintSetStart="@+id/largecs">
+        app:duration="500"
+        app:constraintSetStart="@id/smallcs"
+        app:constraintSetEnd="@+id/pizzaDesc"
+        >
         <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/medium" />
+            app:targetId="@+id/pizza"
+            />
     </Transition>
     <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/largecs"
-        app:constraintSetStart="@+id/mediumcs">
+        app:duration="500"
+        app:constraintSetStart="@id/mediumcs"
+        app:constraintSetEnd="@+id/pizzaDesc"
+        >
         <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/large" />
-    </Transition>
-    <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/smallcs"
-        app:constraintSetStart="@+id/mediumcs">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/small" />
+            app:targetId="@+id/pizza" />
     </Transition>
 
     <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/smallcs">
-        <OnClick app:targetId="@+id/pizza"
-            />
+        app:duration="500"
+        app:constraintSetStart="@id/largecs"
+        app:constraintSetEnd="@+id/pizzaDesc"
+        >
+        <OnClick
+            app:targetId="@+id/pizza" />
     </Transition>
-    <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/mediumcs">
-        <OnClick app:targetId="@+id/pizza"
-            />
-    </Transition>
-    <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/largecs">
-        <OnClick app:targetId="@+id/pizza"
-            />
-    </Transition>
+
+
+
 </MotionScene>

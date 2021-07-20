@@ -92,126 +92,30 @@
         </Constraint>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/PizzaDesc">
-        <Constraint
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="342dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-        <Constraint
-            android:id="@+id/pizza"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginRight="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/info"
-            app:layout_constraintEnd_toEndOf="@+id/plate"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
-        <Constraint
-            android:id="@+id/info"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-        <Constraint
-            android:id="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintDimensionRatio="h,20:3"
-            app:layout_constraintStart_toStartOf="parent" />
-        <Constraint
-            android:id="@+id/toHide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            app:transitionEasing="accelerate" />
-    </ConstraintSet>
+    <Transition
+        app:constraintSetStart="@+id/smallcs"
+        />
 
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/largecs"
-        app:constraintSetStart="@+id/smallcs">
+        app:constraintSetEnd="@+id/largecs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@id/large" />
     </Transition>
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/mediumcs"
-        app:constraintSetStart="@+id/smallcs">
+        app:constraintSetEnd="@+id/mediumcs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@+id/medium" />
     </Transition>
     <Transition
         app:duration="2000"
         app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/smallcs"
-        app:constraintSetStart="@+id/largecs">
+        app:constraintSetEnd="@+id/smallcs">
         <OnClick
-            app:clickAction="transitionToEnd"
             app:targetId="@+id/small" />
     </Transition>
 
-    <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/mediumcs"
-        app:constraintSetStart="@+id/largecs">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/medium" />
-    </Transition>
-    <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/largecs"
-        app:constraintSetStart="@+id/mediumcs">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/large" />
-    </Transition>
-    <Transition
-        app:duration="2000"
-        app:motionInterpolator="bounce"
-        app:constraintSetEnd="@+id/smallcs"
-        app:constraintSetStart="@+id/mediumcs">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/small" />
-    </Transition>
-
-    <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/smallcs">
-        <OnClick app:targetId="@+id/pizza"
-            />
-    </Transition>
-    <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/mediumcs">
-        <OnClick app:targetId="@+id/pizza"
-            />
-    </Transition>
-    <Transition
-        app:constraintSetEnd="@+id/PizzaDesc"
-        app:constraintSetStart="@+id/largecs">
-        <OnClick app:targetId="@+id/pizza"
-            />
-    </Transition>
 </MotionScene>
